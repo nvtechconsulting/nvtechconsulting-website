@@ -3,11 +3,12 @@
 	Kept separate from main.css so template updates/diffs stay clean.
 */
 
-/* Header logo mark sizing (image asset itself is high-res for retina) */
+/* Header logo mark sizing (image asset itself is high-res for retina).
+   No margin here: the logo sits alone in a flex-centered circle, so any
+   one-sided margin would drag it off-center within that circle. */
 .nv-symbol {
 	width: 64px;
 	height: 64px;
-	margin-right: 0.85rem;
 }
 
 /* Brand panels: replace the old flattened photo banners with a plain,
