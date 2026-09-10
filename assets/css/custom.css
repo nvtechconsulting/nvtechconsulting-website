@@ -1,0 +1,67 @@
+/*
+	Custom overrides on top of the Dimension template.
+	Kept separate from main.css so template updates/diffs stay clean.
+*/
+
+/* Header logo mark sizing (image asset itself is high-res for retina) */
+.nv-symbol {
+	width: 64px;
+	height: 64px;
+	margin-right: 0.85rem;
+}
+
+/* Brand panels: replace the old flattened photo banners with a plain,
+   on-brand background + the logo placed live in HTML (never baked into
+   a flattened image again). Matches the template's existing monochrome
+   dark palette (#1b1f22) and reuses its noise overlay texture. */
+.brand-panel {
+	position: relative;
+	overflow: hidden;
+	background-color: #1b1f22;
+	background-image: url("../../images/overlay.png");
+	background-repeat: repeat;
+	border-radius: 4px;
+	display: flex;
+	align-items: center;
+}
+
+.brand-panel.intro-visual {
+	height: 180px;
+	justify-content: center;
+}
+
+.brand-panel.intro-visual img {
+	width: 110px;
+	opacity: 0.14;
+}
+
+.brand-panel.about-banner {
+	min-height: 220px;
+	justify-content: flex-start;
+	padding: 2.5rem;
+}
+
+.brand-panel.about-banner img {
+	width: 130px;
+	max-width: 35%;
+	height: auto;
+}
+
+@media screen and (max-width: 736px) {
+	.brand-panel.intro-visual {
+		height: 130px;
+	}
+
+	.brand-panel.intro-visual img {
+		width: 80px;
+	}
+
+	.brand-panel.about-banner {
+		min-height: 160px;
+		padding: 1.5rem;
+	}
+
+	.brand-panel.about-banner img {
+		width: 90px;
+	}
+}
