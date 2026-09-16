@@ -29,23 +29,19 @@
 .brand-panel.intro-visual {
 	height: 180px;
 	justify-content: center;
-}
-
-.brand-panel.intro-visual img {
-	width: 110px;
-	opacity: 0.14;
+	padding: 0 1.5rem;
 }
 
 .brand-panel.about-banner {
 	min-height: 220px;
-	justify-content: flex-start;
-	padding: 2.5rem;
+	justify-content: center;
+	padding: 1.5rem;
 }
 
-.brand-panel.about-banner img {
-	width: 130px;
-	max-width: 35%;
-	height: auto;
+.hero-graphic {
+	width: 100%;
+	height: 100%;
+	display: block;
 }
 
 @media screen and (max-width: 736px) {
@@ -53,17 +49,8 @@
 		height: 130px;
 	}
 
-	.brand-panel.intro-visual img {
-		width: 80px;
-	}
-
 	.brand-panel.about-banner {
 		min-height: 160px;
-		padding: 1.5rem;
-	}
-
-	.brand-panel.about-banner img {
-		width: 90px;
 	}
 }
 
@@ -186,6 +173,19 @@
 	color: rgba(255, 255, 255, 0.8);
 }
 
+.prototype-screenshot {
+	margin-top: 1.5rem;
+	border-radius: 4px;
+	overflow: hidden;
+	border: solid 1px rgba(255, 255, 255, 0.12);
+}
+
+.prototype-screenshot img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
 /* Contact credibility line */
 
 .contact-meta {
@@ -196,10 +196,7 @@
 
 @media screen and (min-width: 737px) {
 	.solution-features {
-		flex-direction: row;
-	}
-
-	.solution-card {
-		flex: 1;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
 	}
 }
