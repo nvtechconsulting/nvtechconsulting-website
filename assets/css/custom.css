@@ -200,3 +200,11 @@
 		grid-template-columns: repeat(2, 1fr);
 	}
 }
+
+/* Prevent long section headings (e.g. "Advisory: AI & Grants") from
+   overflowing the viewport on mobile. main.css sizes h*.major with
+   width: max-content so the underline hugs short titles; capping it
+   at 100% lets long titles wrap instead of running off-screen. */
+h1.major, h2.major, h3.major, h4.major, h5.major, h6.major {
+	max-width: 100%;
+}
